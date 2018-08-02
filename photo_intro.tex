@@ -8,52 +8,44 @@
 \institute{Rafael\textbf{Jeffman}\\\tiny{F O T O G R A F I A}}
 \date{Abril de 2018}
 
+\newcommand{\oneimage}[3][7cm]{%
+    \begin{frame}%
+        \frametitle{#2}%
+        \begin{center}%
+            \includegraphics[height=#1]{#3} %
+        \end{center}%
+    \end{frame}%
+}
+
 \begin{document}
 
+%01
 \coverframe
 
-\begin{frame}
-    \frametitle{A Formação da Imagem}
-\begin{center}
-    \includegraphics[height=6cm]{images/olho.jpg}
-\end{center}
-\end{frame}
+%02
+\oneimage[6cm]{A Formação da Imagem}{images/olho.jpg}
 
-\begin{frame}
-    \frametitle{A Câmera Obscura}
-\begin{center}
-    \includegraphics[height=7cm]{images/pinhole.jpg}
-\end{center}
-\end{frame}
+% \begin{frame}
+%     \frametitle{A Formação da Imagem}
+%     \oneimage[6cm]{images/olho.jpg}
+% \end{frame}
 
-\begin{frame}
-    \frametitle{Joseph Nicéphore Niépce}
-\begin{center}
-    \includegraphics[height=7cm]{images/niepce.jpg}
-\end{center}
-\end{frame}
+%03
+\oneimage{A Câmera Obscura}{images/pinhole.jpg}
 
-\begin{frame}
-    \frametitle{Louis-Jaques-Mandé Daguerre}
-\begin{center}
-    \includegraphics[height=7cm]{images/daguerre.jpg}
-\end{center}
-\end{frame}
+%04
+\oneimage{Joseph Nicéphore Niépce}{images/niepce.jpg}
 
-\begin{frame}
-    \frametitle{Hércule de Florence}
-\begin{center}
-    \includegraphics[height=7cm]{images/florence.jpg}
-\end{center}
-\end{frame}
+%05
+\oneimage{Louis-Jaques-Mandé Daguerre}{images/daguerre.jpg}
 
-\begin{frame}
-    \frametitle{Câmera \textit{Pinhole}}
-\begin{center}
-    \includegraphics[height=7cm]{images/latamagica.jpg}
-\end{center}
-\end{frame}
+%06
+\oneimage{Hércule de Florence}{images/florence.jpg}
 
+%07
+\oneimage{Câmera \textit{Pinhole}}{images/latamagica.jpg}
+
+%08
 \begin{frame}
     \frametitle{Formação da Imagem}
     \begin{itemize}
@@ -63,13 +55,10 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-    \frametitle{A Câmera Fotográfica}
-\begin{center}
-    \includegraphics[height=7cm]{images/basic_camera.jpg}
-\end{center}
-\end{frame}
+%09
+\oneimage{A Câmera Fotográfica}{images/basic_camera.jpg}
 
+%10
 \begin{frame}
     \frametitle{Tipos de Câmeras}
     \begin{itemize}
@@ -82,16 +71,28 @@
     \end{itemize}
 \end{frame}
 
+%11
 \imagehorizontal[\textit{Twin Lens Reflex}]{images/tlr.jpg}
+
+%12
 \imagevertical[\textit{Alpa Technical Camera}]{images/alpa.jpg}
+
+%13
 \bigimage{images/phaseone.jpg}
+
+%14
 \bighorizontal{images/canon-nikon.jpg}
 
+%15
 \bigtitle{Sensores Fotográficos}
+
+%16
 \bigimage{images/sensorsizes.png}
 
+%17
 \imagevertical[Matriz Bayer]{images/bayer.png}
 
+%18
 \begin{frame}
         \frametitle{Sensores Digitais}
 
@@ -103,6 +104,7 @@
         \end{itemize}
 \end{frame}
 
+%19
 \begin{frame}
     \frametitle{Efeitos do sensor na fotografia}
 
@@ -115,6 +117,7 @@
     \end{itemize}
 \end{frame}
 
+%20
 \begin{frame}
     \frametitle{Objetivas}
     \begin{itemize}
@@ -125,9 +128,13 @@
     \end{itemize}
 \end{frame}
 
+%21
 \imagevertical[\Large{Ângulo de Visão vs. Distância Focal}]{images/focal.jpg}
+
+%22
 \imagevertical[\Large{Ângulo de Visão vs. Distância Focal}]{images/red-barn-sequence.jpg}
 
+%23
 \begin{frame}
     \frametitle{Objetivas Normais}
     \begin{itemize}
@@ -144,6 +151,7 @@
     \end{itemize}
 \end{frame}
 
+%24
 \begin{frame}
     \frametitle{Objetivas Grande-angulares}
     \begin{itemize}
@@ -160,6 +168,7 @@
     \end{itemize}
 \end{frame}
 
+%25
 \begin{frame}
     \frametitle{Objetivas Ultragrande-angulares}
     \begin{itemize}
@@ -176,6 +185,7 @@
     \end{itemize}
 \end{frame}
 
+%26
 \begin{frame}
     \frametitle{Objetivas Telefoto}
     \begin{itemize}
@@ -193,6 +203,7 @@
     \end{itemize}
 \end{frame}
 
+%27
 \begin{frame}
     \frametitle{Objetivas Super-telefoto}
     \begin{itemize}
@@ -210,11 +221,19 @@
     \end{itemize}
 \end{frame}
 
+%28
 \imagevertical[Normal]{images/normal.jpg}
+
+%29
 \imagevertical[Ultragrande-angular]{images/ultrawide.jpg}
+
+%30
 \imagevertical[Meia-tele]{images/meia-tele.jpg}
+
+%31
 \imagevertical[Super-telephoto]{images/supertele.jpg}
 
+%32
 \begin{frame}
     \frametitle{Objetivas Especiais}
     \begin{description}
@@ -224,10 +243,16 @@
     \end{description}
 \end{frame}
 
+%33
 \imagevertical[Fisheye]{images/fisheye.jpg}
+
+%34
 \imagevertical[Objetiva Macro]{images/macro-lens.jpg}
+
+%35
 \imagevertical[Tubo Macro]{images/macro-tube.jpg}
 
+%36
 \begin{frame}
     \frametitle{Focalização}
     \begin{itemize}
@@ -239,6 +264,7 @@
     \end{itemize}
 \end{frame}
 
+%37
 \begin{frame}
     \frametitle{Exposição ou Fotometria}
     \begin{itemize}
@@ -250,6 +276,7 @@
     \end{itemize}
 \end{frame}
 
+%38
 \begin{frame}
     \frametitle{Exposição "Correta"}
 
@@ -261,8 +288,10 @@
     \end{itemize}
 \end{frame}
 
+%39
 \imagevertical[Cartão Cinza, 18\%]{images/graycard}
 
+%40
 \begin{frame}
     \frametitle{Controle de Exposição}
     Para controlar a exposição podemos alterar:
@@ -273,8 +302,10 @@
     \end{itemize}
 \end{frame}
 
+%41
 \bigimage{images/bucket-analogy.jpg}
 
+%42
 \begin{frame}
     \frametitle{Controle de Exposição}
     \begin{itemize}
@@ -283,6 +314,7 @@
     \end{itemize}
 \end{frame}
 
+%43
 \begin{frame}
     \frametitle{Controle de Exposição}
     \begin{itemize}
@@ -292,20 +324,29 @@
     \end{itemize}
 \end{frame}
 
+%44
 \bigimage{images/exposure-triangle.jpg}
 
+%45
 \imagevertical[ISO 100, 1/125, f:16]{images/graycard}
+
+%46
 \imagevertical[ISO 400, 1/1000, f:11]{images/graycard}
+
+%47
 \imagevertical[ISO 100, 1/500, f:8]{images/graycard}
 
+%48
 \bigimage{images/black_white}
 
+%49
 \begin{frame}
     \frametitle{Exposição Correta}
     Expor corretamente significa escolher o objeto mais importante da cena e
     ajustar a esposição de forma que este objeto seja mostrado como desejado.
 \end{frame}
 
+%50
 \begin{frame}
     \frametitle{O Obturador}
     \begin{itemize}
@@ -316,6 +357,7 @@
     \end{itemize}
 \end{frame}
 
+%51
 \begin{frame}
     \frametitle{O Tempo de Exposição.}
     \begin{itemize}
@@ -326,6 +368,7 @@
     \end{itemize}
 \end{frame}
 
+%52
 \begin{frame}
     \frametitle{A Escala de Tempo}
     \vfill
@@ -357,6 +400,7 @@
     \vfill
 \end{frame}
 
+%53
 \begin{frame}
     \frametitle{Tempos comuns de exposição.}
     \begin{itemize}
@@ -368,11 +412,19 @@
     \end{itemize}
 \end{frame}
 
+%54
 \bigimage{images/confete.jpg}
+
+%55
 \bigimage{images/tenis.jpg}
+
+%566
 \bigimage{images/helicopter.jpg}
+
+%57
 \bigimage{images/vialactea.jpg}
 
+%58
 \begin{frame}
     \frametitle{O Diafragma}
     \begin{itemize}
@@ -383,6 +435,7 @@
     \end{itemize}
 \end{frame}
 
+%59
 \begin{frame}
     \frametitle{O Diafragma}
     \begin{itemize}
@@ -394,11 +447,19 @@
     \end{itemize}
 \end{frame}
 
+%60
 \imagehorizontal[A Escala do Diafragma]{images/diafragma.jpg}
+
+%61
 \imagehorizontal[Diafragma $f$:16]{images/f16.jpg}
+
+%62
 \imagehorizontal[Diafragma $f$:5.6]{images/f5-6.jpg}
+
+%63
 \imagehorizontal[Diafragma $f$:1.4]{images/f1-4.jpg}
 
+%64
 \begin{frame}
     \frametitle{Uso criativo do diafragma.}
     \begin{itemize}
@@ -410,9 +471,13 @@
     \end{itemize}
 \end{frame}
 
+%65
 \imagehorizontal[Foto Seletivo]{images/foco_seletivo.jpg}
+
+%66
 \imagehorizontal[\textit{Bokeh} com Formas]{images/bokeh_shapes.jpg}
 
+%67
 \begin{frame}
     \frametitle{A Sensibilidade a Luz}
     \begin{itemize}
@@ -422,6 +487,7 @@
     \end{itemize}
 \end{frame}
 
+%68
 \begin{frame}
     \hspace{0.5cm}baixo\hspace{0.5cm}normal\hspace{2cm}alto\hspace{3cm}muito alto
     \frametitle{Escala ISO}
@@ -455,6 +521,7 @@
     \vfill
 \end{frame}
 
+%69
 \finalframe[Vamos gastar o obturador!]{rafasgj@gmail.com}
 
 \end{document}
