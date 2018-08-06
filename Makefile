@@ -1,7 +1,6 @@
-PALESTRAS=photo_intro photo_composition photo_light
+PALESTRAS=photo_intro photo_composition photo_light photo_lightroom
 
 %.pdf: %.tex
-	xelatex $<
 	xelatex $<
 	$(RM) *.aux *.dvi *.out *.log *.nav *.snm *.toc *.vrb
 
