@@ -2,6 +2,10 @@
 
 \loadtheme{photoroll}
 
+\usepackage{pifont}
+\def\cmark{\ding{51}}
+\def\xmark{\ding{55}}
+
 \title{Ajustes com Lightroom e Photoshop}
 \subtitle{Conceitos Básicos de Fotografia Digital}
 \author{}
@@ -808,43 +812,560 @@
     \end{columns}
 \end{frame}
 
-%
-% Up in the file...
-% Local Adjustment
-%
-% History
-% left_buttons
-% right_buttons
-% presets
-% Snapshots
-%
-% Toolbar (reference_view_launch, Spot healing)
-%
-% Copy/Preset selection screen
-%30
+%38
 \begin{frame}
-    \frametitle{}
+    \frametitle{\textit{Spot Removal}}
     \begin{columns}
         \column{0.3\textwidth}{
             \begin{tikzpicture}
                 \node[anchor=south west,inner sep=0] at (0,0)
-                    {\includegraphics[width=4.3cm]{images/lr_right_buttons.png}};
-                \draw[cyan,ultra thick,rounded corners]
-                    (0.1, 4.5) rectangle (3.5,5.0);
+                    {\includegraphics[width=4.3cm]{images/lr_spot_removal.png}};
+            \end{tikzpicture}
+
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Utilizado para remover imperfeições.
+                \item Criado originalmente para remover sujeiras do sensor.
+                \item A ferramenta \textbf{visualizar pontos}, mostra as \textit{bordas} na
+                imagem, facilitando encontrar sujeira do sensor e outros problemas.
+            \end{itemize}
+        }
+    \end{columns}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0)
+                {\includegraphics[width=10cm]{images/lr_spot_removal_toolbar.png}};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+%39
+\begin{frame}
+    \frametitle{Remoção de Olhos Vermelhos}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_red_eye.png}};
             \end{tikzpicture}
         }
         \column{0.65\textwidth}{
             \begin{itemize}
-                \item None
+                \item Remove o efeito de \textit{olhos vermelhos} causados pelo
+                \textit{flash}.
+                \item Clique no centro do olho e defina a elipse para marcar a área
+                de correção.
+                \item Pode ser utilizado para corrigir cores diferentes em olhos
+                de animais, que não ficam vermelhos como os olhos humanos.
             \end{itemize}
         }
     \end{columns}
 \end{frame}
 
-%xx
+%40
+\begin{frame}
+    \frametitle{Ajustes Locais}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (1.6, 6.5) rectangle (4.2, 7.0);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Aplicam ajustes em locais específicos de uma imagem, baseados em uma máscara.
+                \item Permitem o ajuste de diversos parâmetros, semelhantes aos parâmetros globais.
+                \item Os métodos de criação de máscaras são \textbf{Gradiente},
+                \textbf{Radial}, e \textbf{Pincel}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%41
+\begin{frame}
+    \frametitle{Ajustes Locais - Máscaras}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (2.1, 6.1) rectangle (4.2, 6.5);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Pode-se criar diversas máscaras de ajustes locais.
+                \item Selecionando um \textbf{pin} de uma máscara de ajuste, é possível
+                alterá-la, mudando o seu efeito.
+                \item Nas máscaras do tipo \textbf{Gradiente} e \textbf{Radial},
+                é possível editar a máscara usando o pincel para incluir ou excluir
+                áreas específicas da imagem.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%42
+\begin{frame}
+    \frametitle{Ajustes Locais - Efeitos}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 5.7) rectangle (4.2, 6.05);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item O Lightroom vem com diversos efeitos de ajustes locais pré-configurados,
+                como Aprimoramento de Iris, Clareamento de Dentes e Suavização de Tons de Pele.
+                \item Novos efeitos podem ser criados a partir dos ajustes de um ajuste local,
+                como um \textit{preset}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%43
+\begin{frame}
+    \frametitle{\Large Ajustes Locais - Balanço de Branco}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 5.2) rectangle (4.2, 5.8);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Ajusta os parâmetros de balanço de branco para o ajuste local.
+                \item Os resultados tendem a ser mais intensos que o ajuuste de
+                branco global.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%44
+\begin{frame}
+    \frametitle{\Large Ajustes Locais - Tons e Presença}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 2.65) rectangle (4.2, 5.2);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Apresentam os mesmos efeitos dos ajustes globais, porém,
+                apenas na região da máscara.
+                \item Visualize a imagem em 100\% para que não apresentes cores
+                falsas ou inversão de tons (\textit{clipping}), devido a ajustes
+                exagerados.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%45
+\begin{frame}
+    \frametitle{Ajustes Locais - Nitidez}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 2.0) rectangle (4.2, 2.6);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Assim como no ajuste global, depois de criar a máscara, visualize
+                a imagem em 100\% ou 200\%, na área afetada.
+                \item O ajuste de \textbf{Nitidez} ...
+                \item O ajuste de \textbf{Ruído} ...
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%46
+\begin{frame}
+    \frametitle{\Large Ajustes Locais - Correção de Lente}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 1.55) rectangle (4.2, 2.15);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Estes ajustes devem ser realizados apenas quando o defeito
+                aparecer na visualização em 100\%.
+                \item Utilize o ajuste \textbf{Moiré} para remover cores falsas devido a
+                padrões de alta freqüência. Verifique em 100\% \textbf{antes} de aplicar
+                o efeito.
+                \item A \textbf{Redução de Borda} busca corrigir o \textit{desvio cromático}
+                de bordas.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%47
+\begin{frame}
+    \frametitle{\Large Ajustes Locais - Cor}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_gradient.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 1.1) rectangle (4.2, 1.5);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item É possível aplicar uma \textbf{cor} na área da máscara do
+                ajuste local, para corrigir a iluminação, ou causar um efeito
+                especial na fotografia.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%48
+\begin{frame}
+    \frametitle{\Large Máscara de Intervalo - Luminosidade}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,2)
+                    {\includegraphics[width=5cm]{images/lr_luminance_mask.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Define a aplicação da mascara de ajuste local apenas em uma
+                faixa de luminosidade específica.
+                \item Facilita a seleção de acordo com o \textit{tom} que precisa
+                ser alterado pelo efeito desejado.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%49
+\begin{frame}
+    \frametitle{Máscara de Intervalo - Cor}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,2)
+                    {\includegraphics[width=5cm]{images/lr_color_mask.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Define a aplicação da mascara de ajuste local apenas em uma
+                faixa de cromaticiades específica.
+                \item Facilita a seleção de acordo com a \textit{cor} que precisa
+                ser alterada pelo efeito desejado.
+                \item O seletor escolhe apenas \textbf{um pixel} para definir a cor,
+                clique com \textit{SHIFT} para selecionar múltiplas cores.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%50
+\imagevertical{Filtro Gradiente}{images/lr_gradient_filter_example.png}
+
+%51
+\begin{frame}
+    \frametitle{Filtro Radial}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.0cm]{images/lr_radial_filter.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Permite o controle do grau de difusão do filtro.
+                \item Permite selecionar se a mascara afetará fora da área demarcada,
+                ou dentro (\textit{inversa}).
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%52
+\imagevertical{Filtro Radial}{images/lr_radial_filter_example.png}
+
+%53
+\imagevertical{Filtro Radial Invertido}{images/lr_radial_filter_invert.png}
+
+%54 - TODO
+\begin{frame}
+    \frametitle{Controles do Pincel}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_brush_controls.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Permite configurar dois pincéis de adição de máscara e um
+                de remoção.
+                \item \textbf{Tamanho} define o raio do pincel.
+                \item \textbf{Difusão}, a área \textit{soft} do pincel.
+                \item \textbf{Fluxo}, a intensidade do pincel.
+                \item \textbf{Máscara automática} aplica o pincel apenas em áreas semelhantes
+                ao que se encontra na \textit{mira} do pincel.
+                \item \textbf{Densidade}, define o percentual máximo aplicado pelo pincel.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%55
+\begin{frame}
+    \frametitle{Pincel}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[height=6.5cm]{images/lr_brush.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Cria uma máscara livre, onde for aplicado o pincel.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%56
+\begin{frame}
+    \frametitle{Instantâneo (\textit{Snapshot})}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,3)
+                    {\includegraphics[width=4.3cm]{images/lr_snapshots.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Um \textbf{instantâneo} é uma cópia da imagem em um determinado
+                momento do seu desenvolvimento.
+                \item Pode ser utilizado como uma \textit{versão} da imagem.
+                \item São gravados no DNG e XMP.
+                \item Não aparecem na biblioteca.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%57
+\begin{frame}
+        \frametitle{Cópias virtuais vs. Instantâneos}
+
+        \begin{tabular}{lcc}
+            \  & \textbf{Cópia Virtual} & \textbf{Instantâneo} \\
+            {\small Permite diferentes versões.} & {\color{green}\cmark} & {\color{green}\cmark} \\
+            {\small Possível atualizar a configuração.} & {\color{green}\cmark} & {\color{green}\cmark} \\
+            {\small Fácil de alterar acidentalmente.} & {\color{red}\cmark} & {\color{green}\xmark} \\
+            {\small Aparece na biblioteca.} & {\color{blue}\cmark} & {\color{blue}\xmark} \\
+            {\small Fácil de comparar com outras verões.} & {\color{green}\cmark} & {\color{red}\xmark} \\
+            {\small Fácil de exportar versões diferentes.} & {\color{green}\cmark} & {\color{red}\xmark} \\
+            {\small Gravada no DNG ou XMP.} & {\color{red}\xmark} & {\color{green}\cmark}
+        \end{tabular}
+\end{frame}
+
+%58
+\begin{frame}
+    \frametitle{Histórico}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_history.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Mostra o histórico de alterações na foto.
+                \item Excluir o histórico não desfaz as alterações na imagem.
+                \item É possível voltar a uma versão anterior, e criar uma cópia virtual,
+                ou \textbf{Instantâneo}, para fazer outra versão da imgem.
+                \item O histórico não é armazenado no DNG ou XMP.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%59
+\begin{frame}
+    \frametitle{Predefinições (\textit{Presets})}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_presets.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item Permite aplicar um conjunto pré-definido de configurações
+                às imagens.
+                \item São armazenados junto com o catálogo.
+                \item Aparecem no histórico como uma única operação.
+                \item Ao criar um novo \textit{preset}, selecione os atributos que
+                devem ser aplicados. \textbf{Sempre} selecione a  \textbf{Versão do Processo}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%60
+\imagevertical{Seleção de Atributos}{images/lr_attribute_selection.png}
+
+%61
+\begin{frame}
+    \frametitle{Reutilizando e Redefinindo}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,2.5)
+                    {\includegraphics[width=4.3cm]{images/lr_right_buttons.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item O botão \textbf{Anterior} (\textit{Previous}) aplica as configurações
+                da última foto ajustada à foto autual.
+                \item O botão \textbf{Redefinir} (\textit{Reset}) zera todas as configurações,
+                trazendo a imagem ao estado da cofiguração \textit{default}.
+                \item Estes botões se encontram na parte inferior do painel direito do módulo \textit{Develop}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%62
+\begin{frame}
+    \frametitle{Copiando Configurações}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,2.2)
+                    {\includegraphics[width=4.3cm]{images/lr_left_buttons.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item É possível copiar todas ou algumas configurações utilizadas
+                em uma foto, e aplicá-las em outra.
+                \item Para isso, utilize os botões que se encontram na parte inferior
+                inferior do painel esquerdo do módulo \textit{Develop}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%63
+\begin{frame}
+    \frametitle{Visualizações}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,2.2)
+                    {\includegraphics[width=4.3cm]{images/lr_toolbar_views.png}};
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            Existem quatro modos de vizualização:
+            \begin{itemize}
+                \item Modo \textbf{lupa}.
+                \item Mostra uma foto de \textbf{referência}, e permite a edição
+                de uma foto \textbf{ativa}.
+                \item Mostra uma comparação da foto atual entre \textbf{antes e depois}
+                da edição.
+                \item Previsão de saída, com \textbf{\textit{soft proofing}}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%64
+%\imagevertical{Visualizações - Reference/Active}{images/}
+
+%65
+\imagevertical{Visualizações - Antes/Depois}{images/lr_before_after_example.png}
+
+%66
+\imagevertical{Visualizações - Antes/Depois}{images/lr_before_after_vertical.png}
+
+%46
+\begin{frame}
+    \frametitle{\textit{Softproofing}}
+    \begin{columns}
+        \column{0.3\textwidth}{
+            \begin{tikzpicture}
+                \node[anchor=south west,inner sep=0] at (0,0)
+                    {\includegraphics[width=4.3cm]{images/lr_soft_proofing_rgb.png}};
+                \draw[cyan,ultra thick,rounded corners]
+                    (0.1, 1.85) rectangle (4.2, 2.15);
+            \end{tikzpicture}
+        }
+        \column{0.65\textwidth}{
+            \begin{itemize}
+                \item \textit{Softproofing} permite prever como ficará a imagem
+                de saída, impressa ou em exibição.
+                \item Os avisos de brancos e pretos se alteram para mostrar quais
+                cores não são corretamente reproduzidas.
+                \item Sempre utilize a simulação de papel e tinta.
+                \item Os valores RGB exibidos são os valores absolutos, sob o
+                ponteiro do \textit{mouse}.
+            \end{itemize}
+        }
+    \end{columns}
+\end{frame}
+
+%
+% Soft proofing
+% Soft proofing RGB
+% Before/After (horiz/vert)
+%
+
+%67
 \finalframe[Vamos gastar o obturador!]{rafasgj@gmail.com}
 
-%xx+1
+%68
 \begin{frame}
     \frametitle{Bibliografia}
     \begin{itemize}[]
