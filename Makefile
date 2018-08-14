@@ -1,4 +1,4 @@
-PALESTRAS=photo_intro photo_composition photo_light photo_lightroom photo_ilumination
+PALESTRAS=photo_intro photo_composition photo_light photo_lightroom photo_ilumination photo_model
 
 %.pdf: %.tex
 	xelatex $<
