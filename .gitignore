@@ -18,6 +18,7 @@
 
 # temparary files
 *.swp
+*.bak
 
 # other files.
 .exrc
